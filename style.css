@@ -1,0 +1,79 @@
+:root {
+    --background: #fdfcfd;
+    --foreground: #211f26;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background: #121113;
+        --foreground: #eeeef0;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: monospace;
+}
+
+main {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    font-size: 4em;
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+.box1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--background);
+    z-index: 100;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+    display: block;
+    cursor: pointer;
+}
+
+.box2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--background);
+    z-index: 100;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .box1,
+    .box2 {
+        width: 50px;
+        height: 50px;
+    }
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+    .text {
+        font-size: 3em;
+    }
+}
